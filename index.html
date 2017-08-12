@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="contactsApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS Contacts Application</title>
+<link rel="stylesheet" href="css/app.css" />
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/contacts.css">
+<link href="css/angular-datepicker.css" rel="stylesheet" type="text/css" />
+<script src="js/lib/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <ul class="menu">
+            <li><a href="#/contacts">All Contacts</a></li>
+            <li><a href="#!/favContacts">Favourite Contacts</a></li>
+        </ul>
+        <ng-view></ng-view>
+    </div>
+
+    <!--<nav><a href="#!allContacts">All Contacts</a>|<a href="#!favouriteContacts">Favourite Contacts</a></nav>
+    <ng-view></ng-view>-->
+
+    <script src="js/lib/angular-1.6.4/angular.min.js"></script>
+    <script src="js/lib/angular-1.6.4/angular-route.min.js"></script>
+    <script src="js/lib/angular-1.6.4/angular-local-storage.js"></script>
+    <script src="app.js"></script>
+    <script src="contacts/contacts.js"></script>
+    <script src="components/contactsData.js"></script>
+    <script src="manageContact/manageContact.js"></script>
+    <script src="favContacts/favContacts.js"></script>
+    <script src="js/lib/angular-datepicker.js"></script>
+</body>
+</html>
