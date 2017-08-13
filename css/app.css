@@ -26,3 +26,8 @@
   content: "";
   padding: 0;
 }
+
+.tbl-scroll{
+  overflow-y:auto;
+  height: 300px;
+}

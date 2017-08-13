@@ -1,11 +1,11 @@
 <div class="container">
     <h1 class="text-center">All Contacts</h1>
-
-    <div class="table-responsive">
+    <input class="form-control" type="text" name="search" ng-model="searchText" placeholder="Search">
+    <div class="table-responsive"> 
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>Id</th>
+                <th></th>
                 <th>Name</th>
                 <th>DOB</th>
                 <th>Phone number</th>
@@ -14,7 +14,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr data-ng-repeat="contact in contacts | orderBy:'firstName'">
+            <tr data-ng-repeat="contact in contacts | filter : searchText | orderBy: 'firstName' ">
                 <td><input type="checkbox" ng-model="contact.select" /></td>
                 <td>{{contact.firstName + ' ' + contact.lastName}}</td>
                 <td>{{contact.dateOfBirth}}</td>
