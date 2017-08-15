@@ -1,7 +1,9 @@
  <div ng-controller="FavContactsCtrl"> 
- <div class="col-md-2" ng-repeat="contact in contacts | filter : {fav : true}" style="border: 1px solid black"> 
-        <p>{{contact.firstName}}</p> 
-        <p>{{contact.secondName}}</p> 
-    </div> 
-      
- </div>  
+    <div class="container">
+        <h1 class="text-center">Favourite Contacts</h1>
+        <div class="col-md-2" ng-repeat="contact in contacts | filter : {fav : true} | orderBy : 'firstName' " style="border: 1px solid black"> 
+            <p>{{contact.firstName}}</p> 
+            <p>{{contact.phoneNumber}}</p> 
+        </div> 
+    </div>  
+ </div>
