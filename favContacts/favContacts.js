@@ -11,18 +11,14 @@
         }])
 
         .controller('FavContactsCtrl', [
-            '$scope', '$location', 'ContactsDataService',
-            function ($scope, $location, contactsDataService) {
+            '$scope', 'ContactsDataService',
+            function ($scope, contactsDataService) {
 
                 $scope.contacts = contactsDataService.getContacts();
 
-                $scope.editContact = function (id) {
-                    $location.path('/edit-contact/' + id);
-                };
-
-                $scope.showDetails = function (id) {
-                    var el = angular.element(document.getElementById('#ct-details-' + id));
-                    el.toggleClass('details-hidden');
-                }
+                // $scope.favoriteFilter = function(item){
+                //     if(item.fav) return true;
+                //     return false;
+                // }
             }]);
 })();
